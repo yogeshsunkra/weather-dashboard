@@ -1,0 +1,88 @@
+.navContainer{
+    height: fit-content;
+    /* padding: 1rem; */
+    border-bottom: 2px solid #434141;
+    /* box-shadow: -2px -2px 20px 0px #00000005; */
+}
+   
+
+
+
+.primaryNavbar {
+  display: flex;
+  align-items: center ;
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.secondaryNavbar {
+  display: flex;
+  align-items: center ;
+  text-align: center;
+}
+
+/* .navContainer .anotherDiv{
+  background: #1E1E1E;
+  background: linear-gradient(to bottom, #1E1E1E, #1e1d1d ,#1E1E1E); 
+z-index: 999;
+  width: 500px;
+  height: 200px;
+  
+  margin: 60px;
+  box-shadow: inset black;
+  border-radius: 20px;
+
+} */
+
+.flex{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.searchBar{
+
+  background: black;
+  padding: 0.5rem;
+  width: -webkit-fill-available;
+  border-radius: 20px;
+}
+
+.searchBar input {
+  border: none;
+  background: none;
+  margin: 2px 4px;
+  padding: 0.4rem;
+
+}
+
+
+.logoContainer img{
+
+  mix-blend-mode:lighten;
+  
+}
+
+.locationBox{
+  margin: 0 7rem 0 6rem;
+    font-size: 1.2rem;
+    
+    text-align: left;
+    
+}
+
+.locationBox span{
+
+  font-size: 1rem;
+
+  margin: 0.2rem;
+  border-bottom: 2px solid #999696;
+
+}
+
+.gitBox{
+
+  margin-left: 5rem;
+  font-size: 2rem;
+   
+}

@@ -1,0 +1,32 @@
+.container{
+padding: 2rem;
+}
+
+.weather{
+height: 380px;
+width: 380px;
+padding: 1rem;
+/* width: fit-content; */
+/* background: rgba( 255, 255, 255, 0 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 9px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+
+background: rgba(15, 15, 15, 0.216);
+box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5);
+backdrop-filter: blur( 1px );
+border-radius: 20px;
+/* border: 1px solid rgba(255, 255, 255, 0.145);  */
+}
+.weather2{
+height: 380px;
+width: 380px;
+padding: 1rem;
+
+background: rgba(255, 255, 255, 0.074);;
+box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5);
+backdrop-filter: blur( 1px );
+border-radius: 20px;
+
+}
