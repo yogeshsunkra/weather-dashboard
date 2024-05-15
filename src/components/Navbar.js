@@ -1,6 +1,7 @@
 
 import React from 'react'
 import './navbar.css'
+import './utility.css'
 import { FaSearch } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
@@ -16,7 +17,7 @@ const Navbar = () => {
         <img src={Logo} alt='Weather Dashboard'></img>
       </div>
       <div className='locationBox flex'>
-        <MdLocationPin/> <span>Bhilai,IN</span>
+        <MdLocationPin/> <span className='text-sm font-400'>Bhilai,IN</span>
         </div>
       <div className='flex searchBar'>
       <FaSearch/>
@@ -26,9 +27,11 @@ const Navbar = () => {
       </div>
       
       <div className='secondaryNavbar'>
-        <div>Today</div>
-        <div>Tommorow</div>
-        <div>5-Day Forecast</div>
+        <div className='text-md font-500'>
+          <span>Today</span>
+        </div>
+        <div className='text-md font-400'>Tommorow</div>
+        <div className='text-md font-400'>5-Day Forecast</div>
       </div>
 
 

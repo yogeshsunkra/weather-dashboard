@@ -1,0 +1,36 @@
+
+.text-xl{
+    font-size: 36px;
+}
+.text-lg{
+    font-size: 32px;
+}
+.text-md{
+    font-size: 20px;
+}
+.text-sm{
+    font-size: 18px;
+}
+.text-xs{
+    font-size: 14px;
+}
+
+.font-300{
+    font-weight: 300;
+}
+
+.font-400{
+    font-weight: 400;
+}
+
+.font-500{
+    font-weight: 500;
+}
+.font-600{
+    font-weight: 600;
+}
+
+.font-700{
+    font-weight: 700;
+}
+
