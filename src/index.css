@@ -12,6 +12,10 @@ padding: 0;
 
 body {
 overflow: hidden;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+min-height: 100vh;
 background: rgb(41,42,44);
 background: linear-gradient(349deg, rgb(29, 29, 29) 19%, rgb(18, 18, 18) 53%, rgb(9, 9, 9) 100%);
 font-family: 'Montserrat' sans-serif;

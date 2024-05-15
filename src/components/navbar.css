@@ -53,6 +53,11 @@ z-index: 999;
   background: none;
   margin: 2px 4px;
   padding: 0.4rem;
+  width: 100%;
+
+}
+.searchBar input:focus-visible {
+  border: none
 
 }
 
@@ -64,10 +69,9 @@ z-index: 999;
 }
 
 .locationBox{
-  margin: 0 7rem 0 6rem;
-    font-size: 1.2rem;
-    
-    text-align: left;
+  margin: 0px 1rem 0 9rem;
+  font-size: 1.2rem;
+  text-align: left;
     
 }
 
@@ -84,5 +88,12 @@ z-index: 999;
 
   margin-left: 5rem;
   font-size: 2rem;
+  filter: drop-shadow(3px 10px 5px #000000);
    
+}
+
+.menuBtn{
+  padding: .5rem;
+  margin: .5rem;
+  color: #818085;
 }
