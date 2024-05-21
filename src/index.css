@@ -6,12 +6,13 @@
 box-sizing: border-box;
 margin: 0;
 padding: 0;
+scroll-behavior: smooth;
 
 
 }
 
 body {
-overflow: hidden;
+/* overflow: hidden; */
 background-position: center;
 background-repeat: no-repeat;
 background-size: contain;
@@ -22,14 +23,21 @@ font-family: 'Montserrat' sans-serif;
 }
 
 .mainContainer{
- max-width: 90%;
- margin: 3rem auto 9rem auto;
+ max-width: 80%;
+ margin: 1rem auto 9rem auto;
  padding: 2rem 2rem;
  border-radius: 30px;
  box-shadow: 0px 8px 40px 2px rgb(10, 10, 10);
- background: rgb(18,18,18);
-background: linear-gradient(349deg, rgba(18,18,18,1) 0%, rgb(31, 31, 31) 55%, rgba(48,48,49,0.9957518163515406) 96%);
+ /* background: rgb(18,18,18);
+background: linear-gradient(349deg, rgba(18,18,18,1) 0%, rgb(31, 31, 31) 55%, rgba(48,48,49,0.9957518163515406) 96%); */
   color: white;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  /* border: 2px solid green; */
+
 }
 
 

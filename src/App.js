@@ -1,10 +1,10 @@
 import React from 'react'
 import './index.css'
 import Navbar from './components/Navbar';
-import Today from './pages/Today';
-import Tomorrow from './pages/Tomorrow';
-import Forecast from './pages/Forecast';
-import { BrowserRouter ,Routes ,Route} from 'react-router-dom';
+import WeathertReport from './components/WeathertReport';
+import Forecast from "./components/Forecast";
+
+import { BrowserRouter} from 'react-router-dom';
 
 const App = () => {
   return (
@@ -12,14 +12,13 @@ const App = () => {
     <div className='mainContainer'>
       
       <Navbar/>
-      
 
-      <Routes>
-        <Route path = '/' element = {<Today/>}/>
-        <Route path = '/tomorrow' element = {<Tomorrow/>}/>
-        <Route path = '/forecast' element = {<Forecast/>}/>
-      </Routes>
+      <div className='container'>
+      <WeathertReport/>
       
+      <Forecast/>
+      </div>
+    
 
     </div>
     </BrowserRouter>

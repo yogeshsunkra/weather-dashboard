@@ -27,46 +27,7 @@ const Navbar = () => {
         <div className='gitBox'><FaGithub /></div>
       </div>
 
-      <div className='secondaryNavbar'>
-        <div className='text-md font-500 menuBtn'>
-          <NavLink
-            to="/"
-            style={({ isActive }) => ({
-              color: isActive
-                ? "white"
-                : "#818085",
-            })}
-          >
-            Today
-          </NavLink>
-        </div>
-        <div className='text-md font-400 menuBtn'>
-        <NavLink
-            to="/tomorrow"
-            style={({ isActive }) => ({
-              color: isActive
-                ? "white"
-                : "#818085",
-            })}
-          >
-            Tommorow
-          </NavLink>
-          </div>
-        <div className='text-md font-400 menuBtn' >
-          
-          <NavLink
-            to="/forecast"
-            style={({ isActive }) => ({
-              color: isActive
-                ? "white"
-                : "#818085",
-            })}
-          >
-            5-Day Forecast
-          </NavLink>
-          
-          </div>
-      </div>
+
 
 
 

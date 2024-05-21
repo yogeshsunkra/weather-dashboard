@@ -1,8 +1,10 @@
 .navContainer{
     height: fit-content;
     /* padding: 1rem; */
-    border-bottom: 2px solid #434141;
-    /* box-shadow: -2px -2px 20px 0px #00000005; */
+    border-bottom: 2px solid #989696;
+    box-shadow: -2px -2px 20px 0px #00000005;
+
+    /* filter: drop-shadow(3px 10px 5px #000000); */
 }
    
 
@@ -92,8 +94,3 @@ z-index: 999;
    
 }
 
-.menuBtn{
-  padding: .5rem;
-  margin: .5rem;
-  color: #818085;
-}
