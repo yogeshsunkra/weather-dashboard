@@ -1,42 +1,35 @@
-
-
-.weatherContainer{
-    /* border: 2px solid red; */
+.weatherContainer {
     padding: 1rem;
 }
 
-.weatherContainer .weather{
+.weatherContainer .weather {
     margin: 1rem;
     height: 250px;
     width: 50rem;
-padding: 1rem;
+    padding: 1rem;
+    background: var(--card-color);
 
-/* background: rgba(47, 47, 47, 0.201); */
-/* background: rgba(15, 15, 15, 0.216); */
-background: rgb(56 55 55 / 22%);
-
-box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5);
-backdrop-filter: blur( 1px );
-border-radius: 20px;
+    box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5);
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
 
 }
 
-.weatherInformation{
+.weatherInformation {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
 }
 
-.weatherInformation .infoCards{
+.weatherInformation .infoCards {
 
     margin: 1rem;
     height: 250px;
     width: 90%;
     padding: 1rem;
-    /* background: rgba(15, 15, 15, 0.216); */
-    background: rgb(56 55 55 / 22%);
+    background: var(--card-color);
     box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5);
-    backdrop-filter: blur( 1px );
+    backdrop-filter: blur(1px);
     border-radius: 20px;
 }

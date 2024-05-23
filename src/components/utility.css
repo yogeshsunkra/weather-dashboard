@@ -35,13 +35,13 @@
 }
 
 .color{
-    color: white;
+    color: var(--text-color);
 }
 
 .color-md{
-    color: #FEFEFE;
+    color: var(--text-color-md);
 }
 
 .color-lt{
-    color: #818085;
+    color: var(--text-color-lt);
 }
