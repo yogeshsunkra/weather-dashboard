@@ -6,14 +6,19 @@ import FiveDayForecast from '../pages/FiveDayForecast';
 import './forecast.css';
 import { NavLink } from 'react-router-dom';
 import '../components/utility.css'
+import { forecast }  from '../api/apiCalling';
 
 const Forecast = () => {
+
+forecast();
+
   return (
     <div className='forecastContainer'>
 
       <div className='container '>
 
         <div className='navbar'>
+          
         <div className='text-md font-500 menuBtn'>
           <NavLink
             to="/"
