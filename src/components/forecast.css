@@ -2,7 +2,7 @@
     padding: 1rem;
 }
 
-.forecastContainer .container {
+.forecastContainer .forecastContent {
 
     display: grid;
     grid-template-columns: 1fr;
@@ -31,7 +31,7 @@
 
 }
 
-.forecastContainer .container .content {
+.forecastContainer .forecastContent .content {
 
     height: 500px;
 

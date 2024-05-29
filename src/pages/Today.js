@@ -5,7 +5,7 @@ const Today = () => {
     return (
         <div className='todayForecast'>
             <div className='weather'>
-                hello
+                
             </div>
 
 
