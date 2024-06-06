@@ -1,6 +1,6 @@
 .weatherContainer {
-    padding: 1rem;
-    display: grid;
+    padding: 1rem 0 0  0;
+     display: grid;
     grid-template-columns: 1fr;
 }
 
@@ -11,7 +11,9 @@
     padding: 1rem;
     background: var(--card-color);
 
-    box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5);
+    /* box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5); */
+    box-shadow: 0 8px 10px 0 rgb(13 12 12 / 95%);
+
     backdrop-filter: blur(1px);
     border-radius: 20px;
 

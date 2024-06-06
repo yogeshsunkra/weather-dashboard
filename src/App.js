@@ -18,6 +18,7 @@ const App = () => {
 
 
 
+
   useEffect(()=>{
     if(navigator.geolocation ) {
       navigator.geolocation.getCurrentPosition((position)=>{
@@ -52,6 +53,11 @@ else{
   },[latitude,longitude])
 
 
+  const handleSearch = (lat,lon)=>{
+    setLatitude(lat);
+    setLongitude(lon)
+  }
+
   // console.log("weather" ,weather)
   // console.log("forecast",forecast)
 
@@ -62,7 +68,7 @@ else{
       <Navbar/>
 
       <div className='container'>
-      <WeathertReport/>
+      <WeathertReport weatherInfo = {weather} />
       
       <Forecast />
       </div>

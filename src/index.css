@@ -13,7 +13,9 @@
 :root {
 
   --background-color: linear-gradient(349deg, rgb(29, 29, 29) 19%, rgb(18, 18, 18) 53%, rgb(9, 9, 9) 100%);
-  --card-color: rgb(56 55 55 / 22%);
+  /* --card-color: rgb(56 55 55 / 22%); */
+  --card-color: rgb(21 21 21 / 22%);
+  
   --text-color: white;
   --text-color-md: #FEFEFE;
   --text-color-lt: #818085;
@@ -33,6 +35,7 @@ body {
 
 .mainContainer {
   max-width: 80%;
+  /* width: clamp(80% 968px, 100%); */
   margin: 1rem auto 9rem auto;
   padding: 2rem 2rem;
   border-radius: 30px;
@@ -43,7 +46,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  margin: 1rem;
+  
 
 }
 
@@ -54,3 +57,30 @@ body {
     color: black;
   }
 }
+
+@media (max-width: 1300px){
+  .mainContainer{
+    max-width: 90%;
+  }
+}
+@media (max-width: 600px){
+  .mainContainer{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1100px){
+  .container{
+    /* max-width: 100%; */
+    grid-template-columns:  1fr;
+  }
+}
+
+/* Navbar 
+@media (max-width: 850px){
+  .container{
+ 
+  }
+}
+
+*/

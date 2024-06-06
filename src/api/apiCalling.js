@@ -53,6 +53,33 @@ export async function weatherInfo(lat ,lon){
 }
 
 
+export async function getGeoCode(input){
+
+
+
+
+
+const options = {
+  method: 'GET',
+  url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/places',
+  params: {namePrefix: input,
+    limit: '10'
+  },
+  headers: {
+    'X-RapidAPI-Key': '39870e17b3mshfb238bcfd1a9944p199473jsneaa09393eaf2',
+    'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	// console.log(response.data);
+  return response.data;
+} catch (error) {
+	console.log(error);
+}
+
+}
 
 
 
