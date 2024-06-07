@@ -10,10 +10,13 @@ import Logo from '../assets/logo.png';
 
 
 
-const Navbar = () => {
+const Navbar = ({handleSearch}) => {
 
   const [input, setInput] = useState();
   const [data, setData] = useState();
+  const [lat,setLat] = useState();
+  const [lon,setLon] = useState();
+
 
 
 
@@ -23,12 +26,12 @@ const Navbar = () => {
 
   useEffect(() => {
 
-    const timeOutId = setTimeout(() => console.log(input), 500);
+    // const timeOutId = setTimeout(() => console.log(input), 500);
 
-    // getGeoCode(input).then(response =>  setData(response.data))
-    //   .catch(error => console.log("error :", error));
+    getGeoCode(input).then(response =>  setData(response.data))
+      .catch(error => console.log("error :", error));
 
-      return () => clearTimeout(timeOutId);
+      // return () => clearTimeout(timeOutId);
 
   }, [input]);
 
@@ -65,9 +68,15 @@ const Navbar = () => {
               data.map((item, i) =>
                 <div className='suggestions' key={i}  >
 
-                  <div onClick={()=> console.log(`lat:${item.latitude} lon : ${item.longitude}`)}>
+                  <div onClick={ ()=> {
+                    
+                    handleSearch(item.latitude,item.longitude)
+                    setLat(item.latitude);
+                    setLon(item.longitude);
+                    console.log(`lat:${item.latitude} lon : ${item.longitude}`)
+                  }}>
 
-                    {item.name},{item.country}</div>
+                    {item.name},{item.region},{item.country}</div>
 
                 </div>
               )

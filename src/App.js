@@ -3,78 +3,78 @@ import './index.css'
 import Navbar from './components/Navbar';
 import WeathertReport from './components/WeathertReport';
 import Forecast from "./components/Forecast";
-import { currentWeather , weatherInfo } from './api/apiCalling'; 
-import { BrowserRouter} from 'react-router-dom';
-import { useEffect , useState} from 'react';
+import { currentWeather, weatherInfo } from './api/apiCalling';
+import { BrowserRouter } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const App = () => {
 
-  const [weather ,setWeather] = useState(); 
-  const [currentWeather ,setCurrentWeather] = useState(); 
-  const [loading ,setLoading] = useState(false); 
-  const [error ,setError] = useState(false); 
-  const [latitude,setLatitude] = useState(); 
-  const [longitude ,setLongitude] = useState();
+  const [weather, setWeather] = useState();
+  const [currentWeather, setCurrentWeather] = useState();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [latitude, setLatitude] = useState();
+  const [longitude, setLongitude] = useState();
 
 
 
+//Locate the coordinates only on initial render
+  useEffect(() => {
 
-  useEffect(()=>{
-    if(navigator.geolocation ) {
-      navigator.geolocation.getCurrentPosition((position)=>{
+    console.log("New Render");
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
 
         setLatitude(position.coords.latitude);
         setLongitude(position.coords.longitude);
 
         console.log("Location Gps")
       })
-  }
-else{
-  console.log("Location not supported");
-}},[])
-  
-
-// console.log("latitude",latitude);
-// console.log("longitude",longitude);
-
-  useEffect(()=>{
-
-    if(latitude !== undefined && longitude !== undefined){
-      console.log("Fetching")
-      //  currentWeather(latitude,longitude).then(response => setWeather(response) ,setError(false),setLoading(false)) 
-      //  .catch(error => setError(true,error)) 
-
-
-       weatherInfo(latitude,longitude)
-       .then(response => setWeather(response) ,setError(false),setLoading(false))
-       .catch(error => setError(true,error)) ;
     }
-    
-  },[latitude,longitude])
+    else {
+      console.log("Location not supported");
+    }
+  }, [])
+
+  //Fetches data if latitude and longitude changes
+
+  useEffect(() => {
+
+    if (latitude !== undefined && longitude !== undefined) {
+      console.log("Fetching")
 
 
-  const handleSearch = (lat,lon)=>{
-    setLatitude(lat);
-    setLongitude(lon)
+      weatherInfo(latitude, longitude)
+        .then(response => setWeather(response), setError(false), setLoading(false))
+        .catch(error => setError(true, error));
+    }
+
+  }, [latitude, longitude])
+
+
+  const handleSearch = (lat, lon) => {
+    if (lat !== undefined || lon !== undefined) {
+      setLatitude(lat);
+      setLongitude(lon)
+    }
+
   }
-
-  // console.log("weather" ,weather)
-  // console.log("forecast",forecast)
 
   return (
     <BrowserRouter>
-    <div className='mainContainer'>
-      
-      <Navbar/>
+      <div className='mainContainer'>
 
-      <div className='container'>
-      <WeathertReport weatherInfo = {weather} />
-      
-      <Forecast />
+        <Navbar handleSearch={handleSearch} />
+
+        <div className='container'>
+          <WeathertReport weatherInfo={weather} />
+
+          <Forecast />
+        </div>
+
+
       </div>
-    
-
-    </div>
     </BrowserRouter>
   )
 }
