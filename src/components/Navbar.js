@@ -10,17 +10,18 @@ import Logo from '../assets/logo.png';
 
 
 
-const Navbar = ({handleSearch}) => {
+const Navbar = ({ handleSearch }) => {
 
   const [input, setInput] = useState();
   const [data, setData] = useState();
-  const [lat,setLat] = useState();
-  const [lon,setLon] = useState();
+  const [lat, setLat] = useState();
+  const [lon, setLon] = useState();
+  const [active, setActive] = useState(false);
 
 
 
 
- 
+
 
 
 
@@ -28,10 +29,10 @@ const Navbar = ({handleSearch}) => {
 
     // const timeOutId = setTimeout(() => console.log(input), 500);
 
-    getGeoCode(input).then(response =>  setData(response.data))
+    getGeoCode(input).then(response => setData(response.data))
       .catch(error => console.log("error :", error));
 
-      // return () => clearTimeout(timeOutId);
+    // return () => clearTimeout(timeOutId);
 
   }, [input]);
 
@@ -46,42 +47,65 @@ const Navbar = ({handleSearch}) => {
           <img src={Logo} alt='Weather Dashboard'></img>
 
         </div>
-        <div className='flex searchBar'>
-          <FaSearch />
-          <input type='text' id='search '
-            placeholder='Search City'
-            onChange={(e) => {
-              setInput(e.target.value);
-              e.preventDefault();
-            } }
-            autoComplete='off'
-          >
+        <div className='searchContainer'
+        
+        // onBlurCapture={()=>{
+        //   setActive(false);
+        // }}
+        >
 
-          </input>
 
-          <div className='dropdown'>
+          <div className='flex searchBar'>
+            <FaSearch />
+            <input type='text' id='search '
+              placeholder='Search City'
+              onChange={(e) => {
+                setInput(e.target.value);
+                e.preventDefault();
+              }}
+              autoComplete='off'
+              onFocus = {()=>setActive(true)}
+              
+            >
 
-            {data !== undefined &&(
+            </input>
 
-              console.log("Suugestions",data),
 
-              data.map((item, i) =>
-                <div className='suggestions' key={i}  >
+            {active && (
 
-                  <div onClick={ ()=> {
-                    
-                    handleSearch(item.latitude,item.longitude)
-                    setLat(item.latitude);
-                    setLon(item.longitude);
-                    console.log(`lat:${item.latitude} lon : ${item.longitude}`)
-                  }}>
+              <div className='dropdown' 
+              
+              // onBlur = {()=>setActive(false)}
+              
+              
+              >
 
-                    {item.name},{item.region},{item.country}</div>
+                {data !== undefined && (
 
-                </div>
-              )
+                  console.log("Suugestions", data),
+
+                  data.map((item, i) =>
+                    <div className='suggestions' key={i}  >
+
+                      <div onClick={() => {
+                        
+                        handleSearch(item.latitude, item.longitude)
+                        setLat(item.latitude);
+                        setLon(item.longitude);
+                        console.log(`lat:${item.latitude} lon : ${item.longitude}`)
+                        setActive(false);
+                      }}>
+
+                        {item.name},{item.region},{item.country.toUpperCase()}</div>
+
+                    </div>
+                  )
+                )}
+
+
+              </div>
+
             )}
-
 
           </div>
         </div>

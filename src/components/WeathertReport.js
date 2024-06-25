@@ -1,9 +1,14 @@
 import React from 'react'
 import './weatherReport.css';
+import { weatherList } from '../utility/dataUtlis';
 
 const WeathertReport = ({weatherInfo}) => {
 
   const weather = {};
+
+
+
+
 
 
   if(weatherInfo){
@@ -19,6 +24,10 @@ const WeathertReport = ({weatherInfo}) => {
 
 <div className='weather'>
  {weather.temp};
+ 
+ 
+  {weatherList.map((icon)=> icon.day)}
+ 
 
 
 </div>
