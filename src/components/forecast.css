@@ -7,7 +7,8 @@
     display: grid;
     grid-template-columns: 1fr;
     background: var(--card-color);
-    box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5);
+    /* box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5); */
+    box-shadow: 1px 2px 20px 6px rgb(13 12 12 / 95%);
     backdrop-filter: blur(1px);
     border-radius: 20px;
 

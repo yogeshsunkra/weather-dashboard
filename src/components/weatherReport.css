@@ -5,18 +5,41 @@
 }
 
 .weatherContainer .weather {
+    
+    flex-direction: column;
+    
     margin: 0 1rem;
     height: 250px;
-    /* width: 50rem; */
     padding: 1rem;
     background: var(--card-color);
-
-    /* box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5); */
-    box-shadow: 0 8px 10px 0 rgb(13 12 12 / 95%);
-
+    box-shadow: 1px 1px 20px 12px rgb(13 12 12 / 95%);
     backdrop-filter: blur(1px);
     border-radius: 20px;
 
+}
+
+.weatherContainer .weather .weatherHeader{
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+    align-items: center;
+}
+.weatherContainer .weather .weatherBody{
+    align-items: center;
+    padding: 0.1rem;
+    overflow: hidden;
+    justify-content: center;
+}
+.weatherContainer .weather .weatherBody .weatherIcon{
+    width: 12rem;
+    margin: 0 1rem;
+}
+.weatherContainer .weather .weatherBody .weatherTemp{
+  margin: 0 1rem;
+}
+.weatherContainer .weather .weatherFooter{
+    justify-content: space-between;
+    align-items: center;
+    padding :0.5rem 0.5rem;
 }
 
 .weatherInformation {
@@ -33,7 +56,8 @@
     width: 90%;
     padding: 1rem;
     background: var(--card-color);
-    box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5);
+    box-shadow: 1px 2px 20px 6px rgb(13 12 12 / 95%);
+    
     backdrop-filter: blur(1px);
     border-radius: 20px;
 }
