@@ -8,10 +8,27 @@ import { NavLink } from 'react-router-dom';
 import '../components/utility.css'
 
 
-const Forecast = () => {
+const Forecast = ({weatherInfo}) => {
+
+  const date = new Date();
+  date.setDate(date.getDate() + 2);
+
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const thirdDay = weekday[date.getDay()];
+  
+
+    const forecastReport = [];
+
+    if(weatherInfo){
+      forecastReport.today = weatherInfo.forecast.forecastday[0];
+      forecastReport.tommorrow = weatherInfo.forecast.forecastday[1];
+      forecastReport.dayAfterTommorrow = weatherInfo.forecast.forecastday[2];
 
 
- 
+      console.log("forecast",forecastReport.today);
+    }
+
+
 
 
   return (
@@ -61,7 +78,7 @@ const Forecast = () => {
             })
             }
           >
-            5-Day Forecast
+            {thirdDay}
           </NavLink>
           
           </div>
@@ -69,9 +86,9 @@ const Forecast = () => {
 
         <div className='content'>
         <Routes>
-        <Route path = '/' element = {<Today />}/>
-        <Route path = '/tomorrow' element = {<Tomorrow/>}/>
-        <Route path = '/forecast' element = {<FiveDayForecast/>}/>
+        <Route path = '/' element = {<Today data ={forecastReport.today} />}/>
+        <Route path = '/tomorrow' element = {<Tomorrow data = {forecastReport.tommorrow}/>}/>
+        <Route path = '/forecast' element = {<FiveDayForecast data = {forecastReport.dayAfterTommorrow}/>}/>
       </Routes>
         </div>
 

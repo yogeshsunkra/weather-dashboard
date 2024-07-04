@@ -17,7 +17,7 @@
   --card-color: rgb(13 12 12 / 22%);
   
   --text-color: white;
-  --text-color-md: #FEFEFE;
+  --text-color-md: #bebebe;
   --text-color-lt: #818085;
 
 }
@@ -65,6 +65,7 @@ body {
   
 
 }
+
 
 
 @media screen and (prefers-color-scheme: light) {

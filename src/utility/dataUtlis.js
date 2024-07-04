@@ -12,7 +12,6 @@ import { ReactComponent as Horizon } from "../assets/weatherIcons/horizon.svg";
 import { ReactComponent as Hurricane } from "../assets/weatherIcons/hurricane.svg";
 import { ReactComponent as LightningBolt } from "../assets/weatherIcons/lightning-bolt.svg";
 import { ReactComponent as Mist } from "../assets/weatherIcons/mist.svg";
-import { ReactComponent as MoonRise } from "../assets/weatherIcons/moonrise.svg";
 import { ReactComponent as Overcast } from "../assets/weatherIcons/overcast.svg";
 import { ReactComponent as OvercastDay } from "../assets/weatherIcons/overcast-day.svg";
 import { ReactComponent as OvercastNight } from "../assets/weatherIcons/overcast-night.svg";
@@ -40,8 +39,6 @@ import { ReactComponent as CloudyNightSmoke } from "../assets/weatherIcons/partl
 import { ReactComponent as Rain } from "../assets/weatherIcons/rain.svg";
 import { ReactComponent as Sleet } from "../assets/weatherIcons/sleet.svg";
 import { ReactComponent as Snow } from "../assets/weatherIcons/snow.svg";
-import { ReactComponent as SunRise } from "../assets/weatherIcons/sunrise.svg";
-import { ReactComponent as SunSet } from "../assets/weatherIcons/sunset.svg";
 import { ReactComponent as Thunderstorm } from "../assets/weatherIcons/thunderstorms.svg";
 import { ReactComponent as ThunderstormDayRain } from "../assets/weatherIcons/thunderstorms-day-rain.svg";
 import { ReactComponent as ThunderstormDaySnow } from "../assets/weatherIcons/thunderstorms-day-snow.svg";

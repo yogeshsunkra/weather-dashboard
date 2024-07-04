@@ -1,18 +1,32 @@
 
-.todayForecast .weather{
-    /* background: rgba(95, 94, 94, 0.136); */
-    /* box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5); */
+.todayForecast{
+    /* overflow: hidden; */
+    /* border: 2px solid red; */
+
+
+}
+.todayForecast .todayContent{
+margin-top: 1rem;
 }
 
-/* .weather2{
-margin: 1rem;
-height: 250px;
-width: 320px;
-padding: 1rem;
 
-background: rgba(255, 255, 255, 0.074);;
-box-shadow: 0 8px 10px 0 rgba(14, 14, 14, 0.5);
-backdrop-filter: blur( 1px );
-border-radius: 20px;
+.todayContent .forecastItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* margin-bottom: 1rem; */
+    padding: 1rem;
+    border-bottom: 2px solid rgba(49, 49, 49, 0.314);
+    
+}
+.forecastItem .forecastItemText{
+    margin: 0.5rem;
+}
 
-} */
+.todayContent .forecastItem  .forecastItem__icon{
+    width: 5rem;
+    display: block;
+    margin-right: 1rem;
+}
+

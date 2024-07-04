@@ -51,3 +51,22 @@
     /* text-align: center; */
 }
 
+.center{
+    align-items: center;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+.flex-column{
+    flex-direction: row;
+}
+.justify-sb{
+     justify-content: space-between;
+}
+.justify-sa{
+     justify-content: space-around;
+}
+.justify-se{
+     justify-content: space-evenly;
+}

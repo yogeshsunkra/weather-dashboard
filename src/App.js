@@ -70,7 +70,7 @@ const App = () => {
         <div className='container'>
           <WeathertReport weatherInfo={weather} />
 
-          <Forecast />
+          <Forecast weatherInfo={weather}/>
         </div>
 
 
