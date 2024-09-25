@@ -22,17 +22,24 @@
   background: black;
   position: relative;
   border-radius: 30px;
+  flex: 1;
 }
 
-.searchBar{
 
+
+.searchBar .web-searchBar{
   align-items: center;
   z-index: 9;
   padding: 0.5rem;
-  max-width: 40rem;
+  /* max-width: 40rem; */
   margin: auto;
 
   border-radius: 20px;
+}
+
+ .mob-searchBar{
+  display: none;
+  margin: 0 1rem;
 }
 
 .searchBar input {
@@ -58,7 +65,7 @@
   position: absolute;
   content: "";
   background: black;
-  width: 30rem;
+  width: 100%;
   top: 130%;
   max-height: 500px;
   right: 0;
@@ -100,7 +107,7 @@
 .logoContainer img{
 
   mix-blend-mode:lighten;
-  width: clamp(7rem, 12vw, 14rem); 
+  width: clamp(9rem, 12vw, 14rem); 
   
 }
 
@@ -122,9 +129,29 @@
 
 .gitBox{
 
-  margin-left: 5rem;
+  
    font-size: clamp(1.5rem, 2.5vw, 2rem); ;
   filter: drop-shadow(3px 10px 5px #000000);
    
 }
 
+
+@media (max-width:700px){
+
+  .searchContainer{
+
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .searchBar .web-searchBar{
+    display: none;
+  }
+
+   .mob-searchBar{
+    display: block;
+  }
+
+
+
+}
