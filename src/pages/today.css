@@ -12,21 +12,25 @@ margin-top: 1rem;
 
 .todayContent .forecastItem{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     width: 100%;
     /* margin-bottom: 1rem; */
-    padding: 1rem;
+    padding: 1rem 0;
     border-bottom: 2px solid rgba(49, 49, 49, 0.314);
     
 }
 .forecastItem .forecastItemText{
     margin: 0.5rem;
 }
+.forecastItem .forecastItem__temp{
+    font-size: 1.5rem;
+    margin: auto;
+}
 
 .todayContent .forecastItem  .forecastItem__icon{
     width: 5rem;
     display: block;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
 }
 

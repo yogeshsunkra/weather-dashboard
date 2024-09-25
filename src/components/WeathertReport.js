@@ -67,7 +67,7 @@ const WeathertReport = ({ weatherInfo }) => {
   return (
     <div className='weatherContainer'>
 
-      <div className='weather flex '>
+      <div className='weather  flex '>
 
         <div className='weatherHeader flex center'>
 
@@ -77,17 +77,18 @@ const WeathertReport = ({ weatherInfo }) => {
         </div>
         <div className='weatherBody flex center'>
           <div className='weatherIcon '> {weather.icon}</div>
-          <div className='weatherTemp text-xl font-500 color'>{weather.temp}</div>
+          <div className='weatherTemp text-xl font-500 color'>{weather.temp} &deg; C</div>
 
         </div>
         <div className='weatherFooter flex center'>
-          <div className='text-md font-500 color-md'>Feels like {weather.feelsLike} </div>
-          <div className='text-md font-500 color-md'>{weather.condition}</div>
+          <div className='text-sm font-500 color-md'>Feels like {weather.feelsLike} </div>
+          <div className='text-sm font-500 color-md'>{weather.condition}</div>
         </div>
 
 
 
       </div>
+
 
 
 

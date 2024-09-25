@@ -27,12 +27,10 @@ const Navbar = ({ handleSearch }) => {
 
   useEffect(() => {
 
-    // const timeOutId = setTimeout(() => console.log(input), 500);
 
     getGeoCode(input).then(response => setData(response.data))
       .catch(error => console.log("error :", error));
 
-    // return () => clearTimeout(timeOutId);
 
   }, [input]);
 
@@ -48,24 +46,21 @@ const Navbar = ({ handleSearch }) => {
 
         </div>
         <div className='searchContainer'
-        
-        // onBlurCapture={()=>{
-        //   setActive(false);
-        // }}
+
         >
 
 
-          <div className='flex searchBar'>
+          <div className='flex searchBar primary'>
             <FaSearch />
-            <input type='text' id='search '
+            <input  type='text' id='search '
               placeholder='Search City'
               onChange={(e) => {
                 setInput(e.target.value);
                 e.preventDefault();
               }}
               autoComplete='off'
-              onFocus = {()=>setActive(true)}
-              
+              onFocus={() => setActive(true)}
+
             >
 
             </input>
@@ -73,11 +68,11 @@ const Navbar = ({ handleSearch }) => {
 
             {active && (
 
-              <div className='dropdown' 
-              
+              <div className='dropdown'
+
               // onBlur = {()=>setActive(false)}
-              
-              
+
+
               >
 
                 {data !== undefined && (
@@ -87,8 +82,8 @@ const Navbar = ({ handleSearch }) => {
                   data.map((item, i) =>
                     <div className='suggestions' key={i}  >
 
-                      <div onClick={() => {
-                        
+                      <div  className = 'text-sm font-500' onClick={() => {
+
                         handleSearch(item.latitude, item.longitude)
                         setLat(item.latitude);
                         setLon(item.longitude);
@@ -112,6 +107,60 @@ const Navbar = ({ handleSearch }) => {
         <div className='gitBox'><FaGithub /></div>
       </div>
 
+      {/* <div className='flex searchBar secondary'>
+            <FaSearch />
+            <input  type='text' id='search '
+              placeholder='Search City'
+              onChange={(e) => {
+                setInput(e.target.value);
+                e.preventDefault();
+              }}
+              autoComplete='off'
+              onFocus={() => setActive(true)}
+
+            >
+
+            </input>
+
+
+            {active && (
+
+              <div className='dropdown'
+
+              // onBlur = {()=>setActive(false)}
+
+
+              >
+
+                {data !== undefined && (
+
+                  console.log("Suugestions", data),
+
+                  data.map((item, i) =>
+                    <div className='suggestions' key={i}  >
+
+                      <div onClick={() => {
+
+                        handleSearch(item.latitude, item.longitude)
+                        setLat(item.latitude);
+                        setLon(item.longitude);
+                        console.log(`lat:${item.latitude} lon : ${item.longitude}`)
+                        setActive(false);
+                      }}>
+
+                        {item.name},{item.region},{item.country.toUpperCase()}</div>
+
+                    </div>
+                  )
+                )}
+
+
+              </div>
+
+            )}
+
+          </div> */}
+
 
 
 
@@ -119,6 +168,10 @@ const Navbar = ({ handleSearch }) => {
 
 
     </div>
+
+
+
+
   )
 }
 
