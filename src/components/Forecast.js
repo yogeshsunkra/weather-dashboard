@@ -67,7 +67,7 @@ const Forecast = ({weatherInfo}) => {
         <div className='text-md font-400 menuBtn' >
           
           <NavLink
-            to="/forecast"
+            to={`/forecast/${date}`}
             style={
               ({ isActive }) => ({
               color: isActive
@@ -88,7 +88,7 @@ const Forecast = ({weatherInfo}) => {
         <Routes>
         <Route path = '/' element = {<Today data ={forecastReport.today} />}/>
         <Route path = '/tomorrow' element = {<Tomorrow data = {forecastReport.tommorrow}/>}/>
-        <Route path = '/forecast' element = {<FiveDayForecast data = {forecastReport.dayAfterTommorrow}/>}/>
+        <Route path = '/forecast/*' element = {<FiveDayForecast data = {forecastReport.dayAfterTommorrow}/>}/>
       </Routes>
         </div>
 

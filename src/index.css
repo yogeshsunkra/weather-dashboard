@@ -54,10 +54,9 @@ body {
 }
 
 .mainContainer {
-  max-width: 80%;
-  /* width: clamp(80% 968px, 100%); */
-  margin: 1rem auto 9rem auto;
-  padding: 2rem 2rem;
+  max-width: 75%;
+  margin: 0.5rem auto 0rem auto;
+  padding: 1rem 1rem;
   border-radius: 30px;
   box-shadow: 0px 8px 40px 2px rgb(10, 10, 10);
   color: white;
@@ -76,20 +75,30 @@ body {
 
 @media (max-width: 1500px){
   .mainContainer{
+    max-width: 85%;
+  }
+}
+@media (max-width: 1300px){
+  .mainContainer{
+    max-width: 95%;
+  }
+}
+@media (max-width: 1100px){
+  .mainContainer{
     max-width: 100%;
   }
 }
-@media (max-width: 600px){
+@media (max-width: 700px){
   .mainContainer{
     /* max-width: 100%; */
     padding: 0;
+    margin: 0;
   }
 
-  @media (min-width:450px) {
-    .mainContainer{
-      background:red;
-    }
-  }
+
+
+  
+
 
   .mainContainer .navContainer{
     padding: 1rem;

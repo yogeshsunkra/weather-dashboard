@@ -1,14 +1,17 @@
 import axios from 'axios';
 
+console.log("process" , process.env.REACT_APP_API_KEY);
 
 export async function currentWeather( lat,lon) {
+
+
   
   const options = {
     method: 'GET',
-    url: 'https://weatherapi-com.p.rapidapi.com/current.json',
+     url: 'https://weatherapi-com.p.rapidapi.com/current.json',
     params: {q: `${lat},${lon}`},
     headers: {
-      'X-RapidAPI-Key': '39870e17b3mshfb238bcfd1a9944p199473jsneaa09393eaf2',
+      'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
       'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
     }
   };
@@ -36,7 +39,7 @@ export async function weatherInfo(lat ,lon){
       days: '3'
     },
     headers: {
-      'X-RapidAPI-Key': '39870e17b3mshfb238bcfd1a9944p199473jsneaa09393eaf2',
+      'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
       'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
     }
   };
@@ -66,7 +69,7 @@ const options = {
     limit: '10'
   },
   headers: {
-    'X-RapidAPI-Key': '39870e17b3mshfb238bcfd1a9944p199473jsneaa09393eaf2',
+    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
     'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
   }
 };

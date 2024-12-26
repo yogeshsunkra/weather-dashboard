@@ -6,6 +6,7 @@ import './utility.css'
 import { getGeoCode } from '../api/apiCalling';
 import { FaSearch } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import Logo from '../assets/logo.png';
 import { enablePageScroll, disablePageScroll } from "scroll-lock";
 import OutsideClickHandler from 'react-outside-click-handler';
@@ -129,18 +130,109 @@ const Navbar = ({ handleSearch }) => {
           </div>
         </div>
 
-        <div style={{display : "flex" ,
-          justifyContent : "center" ,
-          alignItems : "center" ,
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}>
-          <div className='mob-searchBar' onClick={()=>toggleSearchBar()}>
+          <div className='mob-searchBar' onClick={() => toggleSearchBar()}>
             <FaSearch />
           </div>
 
           <div className='gitBox'>
             <FaGithub /> </div>
-         </div>
+        </div>
+
+
+
+
+
       </div>
+
+
+      {
+        search && (
+          <div style={{
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: '100%',
+            background: '#181616',
+            height: '100vh'
+          }}>
+            <div className='mob-search'>
+
+              <div style={{ display : "flex",alignItems:"center"}}>
+
+                <input type='search' id='search '
+                  placeholder='Search City'
+                  onChange={(e) => {
+                    setInput(e.target.value);
+                    e.preventDefault();
+                  }}
+                  autoComplete='off'
+
+
+                >
+
+                </input>
+
+                <IoClose onClick={()=>toggleSearchBar()}/>
+
+              </div>
+
+
+
+
+
+              <div className='dropdown'>
+
+
+
+                {data !== undefined && (
+
+                  console.log("Suugestions", data),
+
+                  data.map((item, i) =>
+                    <div className='suggestions' key={i}  >
+
+                      <div className='text-sm font-500' onClick={() => {
+
+                        handleSearch(item.latitude, item.longitude)
+                        setLat(item.latitude);
+                        setLon(item.longitude);
+                        console.log(`lat:${item.latitude} lon : ${item.longitude}`)
+                        toggleSearchBar();
+                      }}>
+
+                        {item.name},{item.region},{item.country.toUpperCase()}</div>
+
+                    </div>
+                  )
+                )}
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+            </div>
+          </div>
+        )
+      }
+
+
+
+
+
+
+
 
 
       {/* <div className='flex searchBar secondary'>
